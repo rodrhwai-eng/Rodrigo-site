@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Forever Valentine 💖</title>
+
+<style>
+body {
+margin: 0;
+padding: 0;
+font-family: 'Georgia', serif;
+background: linear-gradient(to bottom, #2b0000, #7a0c0c);
+color: #fff;
+text-align: center;
+overflow-x: hidden;
+}
+
+/* Falling hearts */
+.heart {
+position: fixed;
+top: -10px;
+font-size: 20px;
+animation: fall linear infinite;
+color: #ff4d6d;
+}
+
+@keyframes fall {
+to {
+transform: translateY(110vh);
+opacity: 0;
+}
+}
+
+.container {
+padding: 40px 20px;
+}
+
+h1 {
+font-size: 3em;
+color: #ffd6d6;
+}
+
+h2 {
+font-weight: normal;
+color: #ffb3b3;
+}
+
+img {
+max-width: 300px;
+border-radius: 20px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+margin: 30px 0;
+}
+
+p {
+font-size: 1.3em;
+line-height: 1.6;
+max-width: 750px;
+margin: 0 auto 30px;
+}
+
+button {
+margin-top: 20px;
+padding: 12px 30px;
+border: none;
+border-radius: 30px;
+background: #ff4d6d;
+color: white;
+font-size: 1.1em;
+cursor: pointer;
+box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+button:hover {
+background: #ff1a4d;
+}
+
+footer {
+margin-top: 50px;
+font-size: 1em;
+color: #ffcccc;
+font-style: italic;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PASSWORD PROTECTION -->
+<script>
+var password = prompt(
+"This page is only for one special person 💖\n\nEnter the password:"
+);
+
+if (password !== "JeanelleForever") {
+document.body.innerHTML =
+"<h1 style='margin-top:20%; color:white;'>Sorry… this love isn’t for you 💔</h1>";
+}
+</script>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+<source src="raindrops.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+<h1>Jeanelle Ndlovu 💖</h1>
+<h2>Will you be my Valentine… and my forever?</h2>
+
+<img src="jeanelle.jpg" alt="My Forever Valentine">
+
+<p>
+Loving you feels easy and real —
+like rain finding the ground, it just makes sense.
+Every moment with you reminds me how special this connection is.
+</p>
+
+<p>
+This isn’t just about Valentine’s Day.
+It’s about choosing you in every season,
+every smile, every quiet moment.
+</p>
+
+<p>
+So with my heart open and no hesitation at all,
+I’m asking you this…
+will you be my forever Valentine?
+</p>
+
+<button onclick="document.getElementById('bgMusic').play()">
+▶ Play our song
+</button>
+
+<footer>
+From just a chill guy who loves you deeply —
+<br>Rodrick Hwaire ❤️
+</footer>
+</div>
+
+<!-- HEART GENERATOR -->
+<script>
+function createHeart() {
+const heart = document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML = "❤️";
+heart.style.left = Math.random() * 100 + "vw";
+heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+document.body.appendChild(heart);
+
+setTimeout(() => {
+heart.remove();
+}, 5000);
+}
+
+setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
